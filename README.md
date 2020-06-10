@@ -1,1 +1,1 @@
-# mp-eslint-config
+# typescript-react-starter
