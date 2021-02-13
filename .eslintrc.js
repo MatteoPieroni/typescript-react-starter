@@ -9,7 +9,7 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:@typescript-eslint/eslint-recommended',
 		'plugin:@typescript-eslint/recommended',
-		'plugin:prettier/recommended',
+		'prettier',
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
@@ -19,7 +19,7 @@ module.exports = {
 		ecmaVersion: 11,
 		sourceType: 'module',
 	},
-	plugins: ['react', '@typescript-eslint', 'react-hooks'],
+	plugins: ['react', '@typescript-eslint', 'prettier', 'react-hooks'],
 	rules: {
 		indent: ['error', 'tab'],
 		'linebreak-style': ['error', 'unix'],
@@ -45,7 +45,10 @@ module.exports = {
 			{ blankLine: 'always', prev: ['const', 'let'], next: '*' },
 			{ blankLine: 'any', prev: ['const', 'let'], next: ['const', 'let'] },
 		],
+		'prettier/prettier': ['error'],
 		'react-hooks/exhaustive-deps': 'warn',
 		'react-hooks/rules-of-hooks': 'error',
+		'react/jsx-uses-react': 'off',
+		'react/react-in-jsx-scope': 'off',
 	},
 };
